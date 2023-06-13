@@ -7,9 +7,9 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "test-rg"
-    storage_account_name = "abcd1234"
+    storage_account_name = "karthikstorage1234"
     container_name       = "tfstate"
-    key                  = "prod.terraform.tfstate"
+    key                  = "terraform.tfstate"
   }
 }
 provider "azurerm" {
