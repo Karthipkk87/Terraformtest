@@ -35,15 +35,14 @@ resource "azurerm_linux_virtual_machine" "example" {
   location            = azurerm_resource_group.example.location
   size                = "Standard_F2"
   admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
-  disable_password_authentication = false
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]
 
   admin_ssh_key {
     username   = "adminuser"
-    admin_password      = "P@$$w0rd1234!"
+    public_key = file("~/.ssh/id_rsa.pub")
+    disable_password_authentication = false
   }
 
   os_disk {
