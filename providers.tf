@@ -11,6 +11,7 @@ terraform {
     container_name       = "test-container"
     key                  = "terraform.tfstate"
   }
+  required_version = "=1.4.0"
 }
 provider "azurerm" {
   # Configuration options
