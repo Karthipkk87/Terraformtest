@@ -35,7 +35,7 @@ resource "azurerm_windows_virtual_machine" "example" {
   location            = azurerm_resource_group.example.location
   size                = "Standard_B2s"
   admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
+  admin_password      = "P@$$w0rd12345678!"
   network_interface_ids = [
     azurerm_network_interface.example.id,
   ]
