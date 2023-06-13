@@ -43,7 +43,7 @@ resource "azurerm_linux_virtual_machine" "example" {
 
   admin_ssh_key {
     username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
+    admin_password      = "P@$$w0rd1234!"
   }
 
   os_disk {
